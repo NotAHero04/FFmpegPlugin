@@ -1,5 +1,5 @@
 diff --git a/scripts/android/ffmpeg.sh b/scripts/android/ffmpeg.sh
-index e2af2ac..078371a 100755
+index e2af2ac..8f6f14f 100755
 --- a/scripts/android/ffmpeg.sh
 +++ b/scripts/android/ffmpeg.sh
 @@ -446,7 +446,7 @@ fi
@@ -11,3 +11,12 @@ index e2af2ac..078371a 100755
    --disable-postproc \
    --disable-doc \
    --disable-htmlpages \
+@@ -471,6 +471,8 @@ fi
+   --disable-nvenc \
+   --disable-vaapi \
+   --disable-vdpau \
++  --disable-shared \
++  --enable-static \
+   ${CONFIGURE_POSTFIX} 1>>"${BASEDIR}"/build.log 2>&1
+ 
+ if [[ $? -ne 0 ]]; then
